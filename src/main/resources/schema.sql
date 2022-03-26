@@ -1,0 +1,5 @@
+create table blogs (
+id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+title VARCHAR(256) NOT NULL,
+article VARCHAR(10192) NOT NULL
+);

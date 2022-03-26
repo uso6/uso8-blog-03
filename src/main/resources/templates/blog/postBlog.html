@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/style :: style(~{::title}, ~{::body})}">
+<head>
+    <title>New Post | Blog</title>
+</head>
+<body>
+<h1 class="mt-3">Post</h1>
+<form action="#" th:action="@{/blog}" th:method="post" th:object="${blogForm}">
+    <div class="mt-3">
+        <label for="titleInput" class="form-label">Title</label>
+        <input type="text" id="titleInput" th:field="*{title}" class="form-control"
+               th:classappend="${#fields.hasErrors('title')} ? is-invalid">
+        <p class="invalid-feedback" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">(error)</p>
+    </div>
+    <div class="mt-3">
+        <label for="articleInput" class="form-label">Article</label>
+        <textarea id="articleInput" rows="10" cols="50" th:field="*{article}" class="form-control"
+                  th:classappend="${#fields.hasErrors('article')} ? is-invalid"></textarea>
+        <p class="invalid-feedback" th:if="${#fields.hasErrors('article')}" th:errors="*{article}">(error)</p>
+    </div>
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="./listBlog.html" th:href="@{/blog}" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+</body>
+</html>
