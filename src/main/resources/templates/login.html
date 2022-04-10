@@ -2,14 +2,28 @@
 <html xmlns:th="http://www.thymeleaf.org"
       th:replace="~{fragments/style :: style(~{::title}, ~{::body})}">
 <head>
-    <title>Home | uso8</title>
+    <title>Login | uso8</title>
 </head>
 <body>
-<h1 class="mt-3">Home</h1>
-<ul type="square">
-    <li>
-        <a href="./blog/listBlog.html" th:href="@{/blog}">Blog</a>
-    </li>
-</ul>
+<h1 class="mt-3">Login</h1>
+<div th:if="${param.error}">
+    <p class="alert alert-danger" role="alert">Invalid username and/or password</p>
+</div>
+<div th:if="${param.logout}">
+    <p class="alert alert-success" role="alert"> You have been successfully logged out</p>
+</div>
+<form action="#" th:action="@{/login}" method="post">
+    <div class="mt-3 col-md-3 mx-auto">
+        <label for="usernameInput" class="form-label">ID</label>
+        <input type="text" id="usernameInput" name="username" class="form-control">
+    </div>
+    <div class="mt-3 col-md-3 mx-auto">
+        <label for="passwordInput" class="form-label">Password</label>
+        <input type="password" id="passwordInput" name="password" class="form-control">
+    </div>
+    <div class="mt-3 col-md-3 mx-auto">
+        <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+</form>
 </body>
 </html>
