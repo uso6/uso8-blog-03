@@ -1,10 +1,6 @@
-# uso8-blog-01
+# uso8-blog-02
 Spring Bootの勉強で作った試験用ブログアプリ。  
-"Home"、"Blog一覧"、"Blog詳細"、"Blog投稿"の4ページのみで構成。  
-  
-### 2022/4/10  
-Spring Securityを追加して、"Blog投稿"をするためのユーザー認証を追加。  
-パスワードエンコードは未実装。   
+uso8-blog-01からH2DBをPostgreSQLへ変更。   
 
 # 使い方
 1.Repositryからプロジェクトのコピー  
@@ -14,4 +10,4 @@ Spring Securityを追加して、"Blog投稿"をするためのユーザー認�
 ```gradle bootrun```  
   
 ※ポート80で動作するため、root権限またはケーパビリティの設定で特権ポートへのアクセスが必要。
-# uso8-blog-02
+
