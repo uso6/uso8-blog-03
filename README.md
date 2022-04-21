@@ -14,3 +14,4 @@ Spring Securityを追加して、"Blog投稿"をするためのユーザー認�
 ```gradle bootrun```  
   
 ※ポート80で動作するため、root権限またはケーパビリティの設定で特権ポートへのアクセスが必要。
+# uso8-blog-02
