@@ -7,7 +7,7 @@ WebアプリケーションをTomcatとApatcheをAJP連携へ変更。
   
 # 使い方
 1.Repositryからプロジェクトのコピー  
-```git clone https://github.com/uso6/uso8-blog-01.git```  
+```git clone https://github.com/uso6/uso8-blog-03.git```  
   
 2.Spring Bootアプリの実行(※)  
 ```gradle bootrun```  
